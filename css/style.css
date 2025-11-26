@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+    display: grid;
+    grid-template:
+    "nv nv nv" 10%
+    "as mn ." 1fr
+    "ft ft ft" 10% / 20% 1fr 20% ;
+    gap:15px;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: nv;
+    background-color: violet;
+    justify-content: space-evenly;
+}
+
+main{
+    grid-area: mn;
+    background-color: yellow;
+}
+
+aside{
+    grid-area: as;
+    background-color: blue;
+}
+
+footer{
+    grid-area: ft;
+    background-color: chocolate;
+    height:fit-content;
+}
