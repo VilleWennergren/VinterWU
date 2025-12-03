@@ -4,75 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="FitFusion - Din personliga träningspartner för ett hälsosammare liv">
+    <title>FitFusion - Hem</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Kedebideri:wght@400;500;600;700;800;900&family=Knewave&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
     <header>
         <nav>
-            <ul id="primmär-nav" class="nav-list">
-                <li><a href="index.html" aria-current="page">Hem</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="tips.html">Tips</a></li>
-            </ul>
+            <div class="logo">FitFusion</div>
+            <div class="nav-links">
+                <a href="index.html" class="aktiv">Hem</a>
+                <a href="program.html">Program</a>
+                <a href="tips.html">Hälsotips</a>
+            </div>
         </nav>
     </header>
-    <main class="main-home">
 
+    <main class="main-home">
+        <!-- Hero Section -->
         <section class="hero">
-            <h1> Välkommen till FitFusion</h1>
-            <p class="hero-rubrik"> FitFusion, Dina skräddarsydda program och tips</p>
-            <a href="program.html" class="cta-knapp">Utforska våra program!</a>
+            <div class="hero-content">
+                <h1>Välkommen till FitFusion</h1>
+                <p class="hero-rubrik">Din personliga träningspartner för ett hälsosammare liv</p>
+                <a href="program.html" class="cta-knapp">Utforska våra program</a>
+            </div>
         </section>
 
+        <!-- Features Section -->
         <section class="features">
             <div class="feature-card">
+                <div class="feature-icon">🎯</div>
                 <h3>Skräddarsydda program</h3>
-                <p>Träning anpassade efter dig</p>
+                <p>Träningsrutiner anpassade efter dina mål och nivå. Oavsett om du är nybörjare eller erfaren får du
+                    ett program som passar just dig.</p>
             </div>
 
             <div class="feature-card">
-                <h3>Expertråd!</h3>
-                <p>Tips raka vägen från experten!</p>
+                <div class="feature-icon">💪</div>
+                <h3>Expertrådgivning</h3>
+                <p>Få tillgång till professionella hälso- och träningsråd från certifierade coaches med mångårig
+                    erfarenhet.</p>
             </div>
 
             <div class="feature-card">
-                <h3>Följ din progress!</h3>
-                <p>Se hur stor skillnad vi faktiskt gör!</p>
+                <div class="feature-icon">📈</div>
+                <h3>Följ din progress</h3>
+                <p>Håll koll på din utveckling och fira dina framsteg med våra smarta verktyg för progressmätning.</p>
             </div>
         </section>
 
+        <!-- Testimonial Section -->
         <section class="recension">
-            <blockquote>
-                "FitFusion har verkligen ändrat min syn på träning och jag är nu mer starkast i sverige! Och deras
-                program är värkligen bra"
-                <cite>- Lucas, 10 år</cite>
-            </blockquote>
+            <div class="testimonial-content">
+                <div class="quote-icon">"</div>
+                <blockquote>
+                    FitFusion har verkligen förändrat mitt förhållande till träning. Programmen är varierade och
+                    motivationen håller i sig!
+                </blockquote>
+                <cite>— Lucas, 10 år</cite>
+            </div>
         </section>
 
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Redo att börja din resa?</h2>
+            <p>Välj det program som passar dig bäst och börja träna redan idag.</p>
+            <a href="program.html" class="cta-button-secondary">Se alla program</a>
+        </section>
     </main>
+
     <footer>
-        <div>alla rättigheter förbehållna © </div>
-        <div>platsinformation</div>
-        <div>
-            <div>
-                <h2>Kontakt:</h2>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>FitFusion</h3>
+                <p>Din partner för ett hälsosammare liv.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Snabblänkar</h3>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="tips.html">Hälsotips</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
                 <ul>
                     <li>Ville Wennergren</li>
-                    <li><a href="https://maps.app.goo.gl/eMv1nWejcTdiKd2M9" target="_blank">Origovägen 4, 253 24</a>
-                    </li>
-                    <li>079 335 81 51</li>
-                    <li>ville@wgrn.se</li>
+                    <li><a href="https://maps.app.goo.gl/eMv1nWejcTdiKd2M9" target="_blank">Origovägen 4, 253 24
+                            Helsingborg</a></li>
+                    <li><a href="tel:0793358151">079 335 81 51</a></li>
+                    <li><a href="mailto:ville@wgrn.se">ville@wgrn.se</a></li>
                 </ul>
-
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FitFusion. Alla rättigheter förbehållna.</p>
+        </div>
     </footer>
 </body>
 
