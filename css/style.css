@@ -1,31 +1,42 @@
 body {
     background-color: white;
     display: grid;
-    grid-template:
-        "nv nv nv" 10%
-        "as mn ." 1fr
-        "ft ft ft" 10% / 20% 1fr 20%;
-    gap: 15px;
     height: 100vh;
+    gap: 15px;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template-areas:
+        "nv nv nv"
+        "as mn as2"
+        "ft ft ft";
+    margin: 0;
 }
 
 nav {
+    grid-area: nv;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    grid-area: nv;
-    background-color: violet;
     justify-content: space-evenly;
+    background-color: violet;
+    padding: 0 10px;
 }
 
 main {
     grid-area: mn;
+    min-width: 0;
 }
 
 aside {
     grid-area: as;
     background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+aside2 {
+    grid-area: as2;
+    display: grid;
+    padding: 10px;
 }
 
 footer {
@@ -33,14 +44,67 @@ footer {
     background-color: chocolate;
     height: fit-content;
     text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+.main-home {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(255, 82, 82, 0.8), #e74c3c);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-image: url("../img/victor-freitas-WvDYdXDzkhs-unsplash.jpg");
+    background-blend-mode: overlay;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    opacity: 0.9;
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-rubrik {
+    font-size: 20px;
+    opacity: 0.9;
+    font-family: "Knewave", system-ui;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.cta-knapp {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-knapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(70, 69, 69, 0.4);
 }
 
 main.cards-container {
     display: grid;
-    grid-template-columns: repeat(3, autofit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-
 }
 
 main.cards-container>div {
@@ -50,115 +114,70 @@ main.cards-container>div {
     border-radius: 5px;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
-.main-home {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0;
-    
-}
-
-.hero {
-    background: linear-gradient(135deg, rgba(255, 82, 82, 0.8), #e74c3c);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-    padding: 100px;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 8px 15px;
-
-}
-
-.hero h1 {
-    font-size: 3rem;
-    opacity: 90%;
-    font-family: "Knewave", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 20px;
-}
-
-.hero-rubrik{
-    font-size: 20px;
-    opacity: 90%;
-    font-family: "Knewave", system-ui;
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom:30px;
-}   
-
-.cta-knapp{
-    display:inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    color:white;
-    background-color: #e74c3c;
-    border-radius: 15px;
-    transition: transform 0,3s, box-shadow 0,3s; 
-}
-
-.cta-knapp:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgb(70, 69, 69);
-}
-
-.features{
+.features {
     display: grid;
-    grid-template-columns: repeate(autofit, minmax(280px/1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     padding: 20px;
 }
 
-.feature-card{
+.feature-card {
     text-align: center;
     text-decoration: none;
     background-color: #e74c3c;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 15px;
-    font-family: "Knewave", system-ui;
-    font-weight: lighter;
-    color: rgb(241, 241, 241);
-    font-size: 1.3rem;
-}
-
-.feature-card:hover{
-    transform:translateY(-8px);
-    box-shadow: 0 8px 15px 0 rgb(51, 51, 51);
-}
-
-.feature-card h3{
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     font-family: "Knewave", system-ui;
     font-weight: 300;
-    font-style: normal;
+    color: rgb(241, 241, 241);
+    font-size: 1.3rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 20%;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(51, 51, 51, 0.25);
+}
+
+.feature-card h3 {
+    font-family: "Knewave", system-ui;
+    font-weight: 300;
     color: #ebebeb;
 }
 
-.recension{
+.recension {
     background-color: #e74c3c;
     text-align: center;
     border-radius: 8px;
     border-left: 5px solid #dd8076;
     margin: 20px;
     padding: 40px;
+    color: #fff;
 }
 
-.recension blockquote{
+.recension blockquote {
     font-style: italic;
     font-size: 1.2rem;
-    line-height: 1,5;
+    line-height: 1.5;
     color: #ffffff;
 }
 
-.recension cite{
+.recension cite {
     display: block;
     margin-top: 5px;
     font-weight: bold;
     font-style: normal;
 }
 
+.cards-sektion{
+    display: flex;
+    flex-direction: row;
+    max-height: 1fr;
+   gap: 12px;
+   height: auto;
+}
