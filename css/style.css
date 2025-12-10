@@ -16,8 +16,9 @@ body {
     display: grid;
     grid-template:
         "nv" auto
+        "sp" 100px
         "mn" 1fr
-        "ft" auto / 1fr;
+        "ft" auto / 100%;
     gap: 0;
     min-height: 100vh;
 }
@@ -180,12 +181,12 @@ main {
 .feature-card h3 {
     font-size: 1.6rem;
     margin-bottom: 16px;
-    color: #ffffff;
+    color: #e74c3c;
     font-weight: 700;
 }
 
 .feature-card p {
-    color: #ffffff;
+    color: #e74c3c;
     line-height: 1.7;
 }
 
@@ -195,22 +196,11 @@ main {
     margin: 0;
 }
 
-.testimonial-content {
+.recension-content {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
     position: relative;
-}
-
-.quote-icon {
-    font-size: 5rem;
-    color: #e74c3c;
-    opacity: 0.2;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: Georgia, serif;
 }
 
 .recension blockquote {
@@ -275,7 +265,7 @@ footer {
     padding: 60px 40px 20px;
 }
 
-.footer-columns {
+.footer-kolumn-sektion {
     max-width: 1400px;
     margin: 0 auto 40px;
     display: grid;
@@ -283,38 +273,38 @@ footer {
     gap: 40px;
 }
 
-.footer-column h3 {
+.footer-kolumn h3 {
     font-size: 1.3rem;
     margin-bottom: 16px;
     font-weight: 700;
     color: #e74c3c;
 }
 
-.footer-column p {
+.footer-kolumn p {
     color: #cbd5e0;
     line-height: 1.6;
 }
 
-.footer-column ul {
+.footer-kolumn ul {
     list-style: none;
 }
 
-.footer-column ul li {
+.footer-kolumn ul li {
     padding: 8px 0;
     color: #cbd5e0;
 }
 
-.footer-column a {
+.footer-kolumn a {
     color: #cbd5e0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-column a:hover {
+.footer-kolumn a:hover {
     color: #e74c3c;
 }
 
-.footer-bottom {
+.footer-båtten {
     max-width: 1400px;
     margin: 0 auto;
     padding-top: 30px;
@@ -322,14 +312,27 @@ footer {
     text-align: center;
 }
 
-.footer-bottom p {
+.footer-båtten p {
     color: #a0aec0;
     font-size: 0.9rem;
 }
 
+.program-rubrik{
+    grid-area: sp;
+    text-decoration: none;
+    font-family: "Knewave", system-ui;
+    font-weight: 300;
+    color: #e74c3c; 
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 main.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
+    margin-right: 20rem;
+    margin-left: 20rem;
     gap: 20px;
     padding: 20px;
 }
@@ -349,6 +352,7 @@ main.cards-container>div {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
+    margin: 5px;
 }
 
 .cards-sektion .feature-card {
@@ -386,104 +390,32 @@ aside {
     padding: 10px;
 }
 
-aside2 {
+aside2{
     grid-area: as2;
     display: grid;
     padding: 10px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+.Hero-tips-card{
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #ffe5e5;
+    background-color: #e74c3c;
+    color: white;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}       
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.cards-container img{
+    width: 100%;
+    border-radius: 10px;
 }
 
-@media (max-width: 1024px) {
-    nav {
-        padding: 20px 40px;
-    }
-
-    .features {
-        padding: 40px 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 20px;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
-
-    .hero {
-        padding: 80px 30px;
-        min-height: 400px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-rubrik {
-        font-size: 1.1rem;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    .recension {
-        padding: 60px 30px;
-    }
-
-    .recension blockquote {
-        font-size: 1.1rem;
-    }
-
-    .cta-section {
-        padding: 60px 30px;
-    }
-
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 0.85rem;
-        padding: 5px 8px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .cta-knapp,
-    .cta-button-secondary {
-        padding: 14px 32px;
-        font-size: 1rem;
-    }
+.Hero-tips-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(231, 76, 60, 0.2);
+    border-color: #e74c3c;
 }
