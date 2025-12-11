@@ -367,9 +367,8 @@ main.cards-container>div {
     color: #ebebeb;
 }
 
-.feature-card-p {
-    font-family: "Knewave", system-ui;
-    font-weight: 300;
+.cards-sektion .feature-card p,
+.cards-sektion .feature-card .feature-card-p {
     color: #ffffff;
 }
 
